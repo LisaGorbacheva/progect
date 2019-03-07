@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+    {% for item in users %}
+	
+    <div class="alert alert-dark" role="alert">
+        <h2>{{item[3]}}</h2>
+        <div>{{item[4]}}</div>
+        <a href="/add_user/{{item[0]}}">subsribe</a>
+        <a href="/del_user/{{item[0]}}">unsubsribe</a>
+    </div>
+	
+{% endfor %}
+{% endblock %}

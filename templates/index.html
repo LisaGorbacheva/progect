@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    {% for item in posts %}
+    <div class="alert alert-dark" role="alert">
+        <h2>{{item[1]}}</h2>
+        <div>{{item[2]}}</div>
+   
+        <a href="/delete_post/{{item[0]}}">Удалить tweet</a>
+    </div>
+{% endfor %}
+{% endblock %}
